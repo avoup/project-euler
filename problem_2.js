@@ -22,10 +22,15 @@ const problem_2_loop = () => {
 const problem_2_recursion = () => {
     let sum = 2;
 
-    const fib = (n) => {
+    const fib = (n, memo = {}) => {
         if (n === 1) return 1;
         else if (n === 2) return 2;
-        else return fib(n - 1) + fib(n - 2);
+        else {
+            if (memo[n]) return memo[n];
+            const res = fib(n - 1, memo) + fib(n - 2, memo);
+            memo[n] = res;
+            return res;
+        }
     }
 
     let i = 1;

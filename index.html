@@ -6,15 +6,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="problem_1.js"></script>
-    <script src="problem_2.js"></script>
-    <script src="problem_3.js"></script>
-    <script src="problem_4.js"></script>
-    <script src="main.js"></script>
+    <style>
+        #problems {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #problems td,
+        #problems th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #problems tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #problems tr:hover {
+            background-color: #ddd;
+        }
+
+        #problems th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        pre {
+            max-width: 700px;
+            overflow: auto;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        h1 {
+            font-family: sans-serif;
+            text-align: center;
+        }
+    </style>
+    <script src="script.js" id="scripts"></script>
+    <script src="main.js" defer></script>
 </head>
 
 <body>
+    <h1>Project Euler solutions</h1>
+    <table id="problems">
+        <thead>
+            <tr>
+                <th>Problem #</th>
+                <th>Description</th>
+                <th>Run</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody>
 
+        </tbody>
+
+    </table>
 </body>
 
 </html>
