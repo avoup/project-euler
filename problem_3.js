@@ -3,11 +3,17 @@ const problem_3 = () => {
      * Check if number is prime
      */
     const isPrime = (num) => {
-        for (let i = 2; i < num / 2 + 1; i++) {
-            if (num % i === 0) return false;
-        }
+        //6k+-1 optimization
+        if (num <= 3) return num > 1;
+        if ((num % 2 === 0) || (num % 3 === 0)) return false;
+
+        for (let i = 5; Math.pow(i, 2) <= num; i += 6)
+            if ((num % i === 0) || (num % (i + 2) === 0)) return false;
+
         return true;
+
     }
+
     /**
      * Find next prime number
      */
